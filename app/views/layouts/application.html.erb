@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rubyprojectmarmel</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header class="header navbar-fixed-top navbar-inverse">
+    <h2 class="text-center text-danger">
+      <%= link_to  I18n.t('shared.header.home'), controller: 'articles' %>
+    </h2>
+    <ul>
+    <li><%= link_to 'rus', locale: :ru%></li>
+    <li><%= link_to 'en', locale: :en%></li>
+
+    </ul>
+  </header>
+  <br>
+  <br>
+
+    <%= yield %>
+
+  <br>
+  <footer class="footer navbar-fixed-bottom navbar-inverse">
+    <small>
+
+      © by MARMEL
+    </small>
+    <nav>
+
+    </nav>
+  </footer>
+  </body>
+</html>
